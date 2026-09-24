@@ -1,26 +1,39 @@
 # El Tomate Mecánico · Escuela de Fútbol Formativo
 
-Landing page oficial desarrollada en **Next.js** y **Tailwind CSS** con metodología Mobile-First y estructura orientada a conversión.
+Landing page oficial desarrollada en **Next.js 15**, **React 19**, **Tailwind CSS v4** y **TypeScript**.
+
+Diseñada con enfoque Mobile-First y optimizada para conversión y despliegue automático en [Vercel](https://vercel.com).
 
 ---
 
 ## 🚀 Despliegue en Vercel
 
-Este proyecto está optimizado para desplegarse directamente en [Vercel](https://vercel.com):
+Este repositorio está preparado para despliegue directo en **Vercel**:
 
-1. **Importar Repositorio:** Conecta tu cuenta de GitHub e importa `msotom18/el-tomate-mecanico`.
-2. **Root Directory:** Si despliegas desde este repositorio raíz, selecciona la carpeta `tomate-b` como **Root Directory**.
-3. **Framework Preset:** Selecciona `Next.js`.
-4. **Build & Output Settings:** Vercel detectará automáticamente `npm run build` y la salida `.next`.
+1. Conecta tu cuenta de GitHub e importa este repositorio (`msotom18/el-tomate-mecanico`).
+2. Vercel detectará automáticamente la configuración de **Next.js** en la raíz (`./`).
+3. Haz click en **Deploy**.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🛠️ Tecnologías
 
-* **`tomate-b/`**: Aplicación web completa en Next.js (App Router, Tailwind 4, TypeScript).
-  * `app/page.tsx`: Landing page con datos duros, prueba con IA, aranceles 2026 y formulario.
-  * `app/globals.css`: Tokens de diseño y colores institucionales (`#c62828`).
-  * `app/layout.tsx`: Layout principal y metadatos SEO.
-* **`tomate-a/`**: Versión estática pura en HTML/CSS (`index.html`).
-* **`tomate/`**: Fuente de verdad (`ficha-tomate.md`) y directrices del club (`AGENTS.md`).
-* **`.agents/`**: Skills y plugins de automatización (skill `landing-page`).
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Biblioteca:** [React 19](https://react.dev/)
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 💻 Desarrollo Local
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+```
