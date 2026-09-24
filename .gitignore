@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.next/
+dist/
+build/
+out/
+
+# Environment and sensitive files
+.env
+.env*.local
+
+# Office & temporary binary files
+*.zip
+*.pptx
+*.docx
+*.csv
+ficha-tomate (1).md
+leads-tomate*
+informe-consultas*
+consultas-directorio*
+
+# OS Files
+.DS_Store
+Thumbs.db

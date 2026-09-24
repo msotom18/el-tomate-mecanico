@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════════════════════════════
+   tokens.css — los colores y las medidas de la página.
+   Reemplaza COMPLETO el archivo app/globals.css con este archivo.
+   (Va completo a propósito: el globals.css que viene por defecto trae
+   un bloque de modo oscuro que le cambia el fondo a negro a media clase.)
+   ═══════════════════════════════════════════════════════════════════ */
+
+@import "tailwindcss";
+
+/* ── Lo único que cambias: los colores de la marca ────────────────── */
+:root {
+  --primary: #c62828;      /* el color fuerte: franja de portada, botones */
+  --primary-ink: #8e0000;  /* el mismo color, más oscuro, para TEXTO sobre blanco */
+  --ink: #16181d;          /* el texto */
+  --muted: #5b6270;        /* el texto secundario */
+  --paper: #ffffff;        /* el fondo */
+  --soft: #f6f7f9;         /* el fondo de las secciones alternadas */
+  --line: #e3e6ea;         /* las líneas y los bordes */
+}
+
+/* ── De aquí abajo no cambia nada ─────────────────────────────────── */
+
+/* Tailwind 4 toma estas variables y te deja escribir bg-primary,
+   text-muted, border-line, etc. */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --color-soft: var(--soft);
+  --color-line: var(--line);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* El botón. Es siempre el mismo en toda la página.
+   Va dentro de @layer components para que las clases de Tailwind
+   (hidden, sm:inline-flex, px-5) le puedan ganar cuando haga falta. */
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    transition: filter 0.15s ease;
+  }
+  .btn:hover { filter: brightness(0.92); }
+  .btn-inverso { background: #fff; color: var(--primary-ink); }
+  .btn-bloque { width: 100%; }
+}
+
+/* Que nadie se pierda al saltar a una sección con el menú pegado arriba */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 5rem; }
